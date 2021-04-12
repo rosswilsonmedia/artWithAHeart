@@ -1,0 +1,993 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix::before, .clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/* COLOR CODES
+
+White = #FFFFFF
+Blue = #01B8E4
+Green = #8DC142
+Yellow = #F3B620
+Red = #D93030
+
+END COLOR CODES */
+
+/* General Settings */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    font-family: 'Neucha', Helvetica, sans-serif;
+    font-size: 1.25em;
+    line-height: 150%;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr;
+    color: white;
+}
+#siteTitle {
+    position: absolute;
+    font-size: 75%;
+    top: .55em;
+    left: 0;
+    width: 100%;
+    color: #01B8E4;
+    text-decoration: none;
+    font-family: 'Gloria Hallelujah', Helvetica, sans-serif;
+}
+#siteTitle>h1>span:nth-of-type(2) {
+    color: #8DC142;
+}
+#siteTitle>h1>span:nth-of-type(3) {
+    color: #F3B620;
+}
+#siteTitle>h1>span:nth-of-type(4) {
+    color: #D93030;
+}
+main {
+    margin: 4em 0 3em;
+    position: relative;
+    width: 100%;
+    background-image: url("images/background/AWAH Web Background.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+main>section {
+    display:none;
+    width: 100%;
+    min-height: calc(100vh - 7em);
+    padding-bottom: 3em;
+}
+main>section::after {
+    background-color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+main>section>article {
+    padding: 0 10% 2em;
+    position: relative;
+    z-index: 2;
+}
+h3 {
+    font-size: 150%;
+    padding: 1em 0 0.5em;
+    text-align: center;
+}
+a {
+    color: #171717;
+}
+a:hover {
+    color: #17171780;
+}
+#buttonLink {
+    text-align: center;
+}
+#buttonLink>a {
+    color: white;
+    margin: 0.5em;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.15em;
+    line-height: 1.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .75em 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1.5em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease 0s;
+    opacity: 75%;
+    transition: opacity 0.3s ease 0s;
+
+}
+#buttonLink>a>i {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 0.5s ease 0s;
+}
+#buttonLink>a:hover>i {
+    left: 0.5em;
+}
+#buttonLink>a:hover {
+    opacity: 100%;
+}
+
+/* End General Settings */
+
+/* Header and Footer Settings */
+
+header {
+    width: 100%;
+    height: 4em;
+    position: fixed;
+    background-color: whitesmoke;
+    z-index: 5;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+}
+header img {
+    float: left;
+    position: relative;
+    left: 5%;
+    top: .5em;
+    height: 3em;
+    width: auto;
+    filter: contrast(135%);
+}
+
+footer {
+    width: 100%;
+    height: 3em;
+    position: fixed;
+    bottom: 0em;
+    right: 0;
+    z-index: 5;
+    background-color: #171717;
+    box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-rows: 1.5em 1.5em;
+}
+#socialMedia {
+    background: linear-gradient(90deg, #01B8E4 0%, #8DC142 33%, #F3B620 67%, #D93030 100%);
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+    height: 3em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    font-size: 75%;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: -1.5em;
+}
+#socialMedia i {
+    color: white;
+    line-height: 200%;
+    font-size: 1.5em;
+    padding: 0 1em;
+}
+footer p {
+    font-size: 0.5em;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 0;
+}
+/* Nav Settings */
+
+#hamburger {
+    float: right;
+    padding: 1em 1.5em 1.2em;
+    position: relative;
+    z-index: 15;
+}
+#hamburger hr {
+    width: 1.5em;
+    height: .2em;
+    margin: 0.3em 0;
+    border: none;
+    transform-origin: 3%;
+    transition: all 0.5s ease 0s;
+}
+#hamburger hr:first-child {
+    background-color: #01B8E4;
+}
+#hamburger hr:nth-child(2) {
+    background-color: #8DC142;
+}
+#hamburger hr:nth-child(3) {
+    background-color: #D93030;
+}
+
+#sideNav {
+    height: calc(100vh - 17em);
+    width: 0%;
+    background-color: #171717F5;
+    position: fixed;
+    top: 4em;
+    right: 0;
+    padding: 4em 0 6em;
+    overflow: auto;
+    z-index: 4;
+    transition: width 0.5s ease 0s;
+}
+
+#sideNav>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(calc(100vh - 17em)/6) 0;
+    opacity: 0;
+    transition: opacity 0.5s ease 0s;
+}
+#sideNav>ul>li {
+    list-style-type: none;
+    margin: 1em 0;
+    overflow: hidden;
+    border-radius: 2.5em;
+    text-align: center;
+    position: relative;
+    background-color: rgba(255,255,255,0.1);
+}
+
+#sideNav a {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: .5em 1.5em;
+    border-radius: 2.5em 0 0 2.5em;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+#sideNav>ul>li>a:nth-last-of-type(1) {
+    border-radius: 3em;
+}
+#sideNav span {
+    font-size: 1.259em;
+    overflow: hidden;
+    position: relative;
+    top: 0.02em;
+    right: 0;
+    z-index: 1;
+    border-radius: 0 2.5em 2.5em 0;
+    padding: .58em 1em;
+    transition: color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+}
+#sideNav span>i {
+    transition: transform 0.3s ease 0s;
+    transform: rotate(0deg);
+}
+#sideNav>ul>li>ul {
+    display: block;
+    list-style-type: none;
+    text-align: center;
+    width: 16em;
+    visibility: hidden;
+    opacity: 0%;
+    transition: all 0.3s ease .1s;
+    position: absolute;
+    top: -1em;
+    margin-bottom: -.5em;
+    padding-bottom: 1em;
+    z-index: 1;
+}
+#sideNav>ul>li>ul>li>a {
+    width: 10em;
+}
+#sideNav>ul>li>ul>li:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+#sideNav>ul>li:nth-child(4n+1)>p>* {
+    color: #01B8E4;
+}
+#sideNav>ul>li:nth-child(4n+2)>p>* {
+    color: #8DC142;
+}
+#sideNav>ul>li:nth-child(4n+3)>p>* {
+    color: #F3B620;
+}
+#sideNav>ul>li:nth-child(4n+4)>p>* {
+    color: #D93030;
+}
+    /* Hover Nav Section Tab Coloring */
+    #sideNav>ul>li:hover>p>* {
+        color: white;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+1)>p>a {
+        background-color: #01B8E4;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+2)>p>a {
+        background-color: #8DC142;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+3)>p>a {
+        background-color: #F3B620;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+4)>p>a {
+        background-color: #D93030;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+1)>p>span {
+        background-color: #01B8E4CC;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+2)>p>span {
+        background-color: #8DC142CC;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+3)>p>span {
+        background-color: #F3B620CC;
+    }
+    #sideNav>ul>li:hover:nth-child(4n+4)>p>span {
+        background-color: #D93030CC;
+    }
+    /* Active Nav Section Tab Coloring */
+    #sideNav>ul>li:nth-child(4n+1) .activeNavSection {
+        background-color: #01B8E4;
+        color: white;
+    }
+    #sideNav>ul>li:nth-child(4n+2) .activeNavSection {
+        background-color: #8DC142;
+        color: white;
+    }
+    #sideNav>ul>li:nth-child(4n+3) .activeNavSection {
+        background-color: #F3B620;
+        color: white;
+    }
+    #sideNav>ul>li:nth-child(4n+4) .activeNavSection {
+        background-color: #D93030;
+        color: white;
+    }
+    #sideNav>ul>li:nth-child(4n+1) .activeSpan {
+        background-color: #01B8E4CC;
+        color: white;
+    }
+    #sideNav>ul>li:nth-child(4n+2) .activeSpan {
+        background-color: #8DC142CC;
+        color: white;
+    }
+    #sideNav>ul>li:nth-child(4n+3) .activeSpan {
+        background-color: #F3B620CC;
+        color: white;
+    }
+    #sideNav>ul>li:nth-child(4n+4) .activeSpan {
+        background-color: #D93030CC;
+        color: white;
+    }
+
+/* End Nav Settings */
+
+/* Section Header Settings */
+
+h1 {
+    font-size: 225%;
+    text-align: center;
+}
+
+#secTitle {
+    padding: 3.5em 0 2.5em;
+    position: relative;
+    z-index: 2;
+}
+
+/* End Section Heading Settings */
+
+/* Index Settings */
+
+.home {
+    width: 100%;
+    background: linear-gradient(90deg, #01B8E499 0%, #8DC14299 33%, #F3B62099 67%, #D9303099 100%);
+    background-attachment: fixed;
+}
+.home::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.home>article>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.home>article {
+    margin:0;
+    padding: 0;
+    position: absolute;
+    top:  48%;
+    left: 50%;
+    width:  80%;
+    height: 1%;
+    transform: translate(-50%, -50%);
+    display: table;
+    z-index: 2;
+}
+.home h1, .home h2, .home a {
+    text-align: left;
+    color: white;
+}
+.home h1 {
+    font-size: 10vw;
+    line-height: 100%;
+    padding-bottom: 1.5vw;
+}
+.home h2 {
+    font-size: 7vw;
+    line-height: 100%;
+    padding-bottom: 1.5vw;
+}
+.home>article>div>div {
+    display: block;
+    text-align: left;
+}
+.home a {
+    font-size: 2vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    margin: 0;
+    text-decoration: none;
+    padding: .75em 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5vw;
+    transition: background-color 0.3s ease 0s;
+}
+.home a>i {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 0.5s ease 0s;
+}
+.home a:hover {
+    background-color: #01B8E4e6;
+}
+.home a:hover>i {
+    left: 1vw;
+}
+
+/* End Index Settings */
+
+/* Who We Are Tab Page Colors */
+
+.about-us, .staff, .contact-us {
+    background-color: #01B8E4CC;
+    background-attachment: fixed;
+}
+
+/* End Who We Are Tab Page Colors */
+
+/* About Us Settings */
+
+.about-us iframe {
+    width: 80vw;
+    height: calc(calc(80vw/16)*9);
+    margin: 1em auto;
+}
+.about-us ul {
+    list-style: outside;
+    max-width: 25em;
+    width: 90%;
+    margin: 0 auto;
+}
+.about-us #buttonLink {
+    padding-top: 1em;
+}
+.about-us #buttonLink>a {
+    background-color: #8DC142;
+}
+
+/* End of About Us Settings */
+
+/* Staff Settings */
+
+.staff>article>p {
+    padding-bottom: 2em;
+}
+#staffFlex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+#staffFlex>section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+#staffImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20em;
+    height: 25em;
+}
+#staffImgContainer img {
+    min-height: 100%;
+    height: 100%;
+    width: auto;
+}
+
+#staffFlex>section:hover>#staffTitle {
+    opacity: 100%;
+}
+#staffTitle {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 2px grey;
+    border-radius: 10px 10px 0 0;
+    padding: 1em;
+    width: 80%;
+    position: absolute;
+    left: 1em;
+    bottom: 0em;
+    transition: all 0.5s ease 0s;
+}
+#staffTitle h3 {
+    font-size: 110%;
+    text-align: center;
+}
+#staffTitle a {
+    font-size: 100%;
+    color: #01B8E4;
+    text-align: center;
+}
+
+/* End Staff Settings */
+
+/* Contact Settings */
+.contact-us>article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(15em, auto);
+    gap: 2em;
+    grid-template-areas: 
+    "location map"
+    "contactMethods emailSignUp";
+}
+.contact-us iframe {
+    grid-area: map;
+    width: 100%;
+    height: 100%;
+}
+.contact-us>article>div:nth-of-type(1) {
+    grid-area: contactMethods;
+}
+.contact-us>article>div:nth-of-type(2) {
+    grid-area: location;
+    align-self: center;
+
+}
+.contact-us>article>div:nth-of-type(3) {
+    grid-area: emailSignUp;
+}
+.contact-us #buttonLink>a:hover {
+    background-color: #01B8E4;
+}
+.contact-us h4 {
+    text-align: center;
+    padding: 1em;
+    font-weight: normal;
+    line-height: 100%;
+    font-size: 125%;
+}
+.contact-us h4>span {
+    font-size: 150%;
+    text-transform: uppercase;
+}
+.contact-us input:not([type=submit]) {
+        width: 250px;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        border: 1.5px solid #171717;
+        background-color: rgba(0, 0, 0, 0.15);
+        color: white;
+}
+.contact-us input:not([type=submit])::placeholder {
+    color:white;
+}     
+.contact-us label {
+        display: inline-block;
+        text-align: right;
+        vertical-align: middle;
+        padding-top:0.3rem;
+        word-wrap: break-word;
+}
+    
+.contact-us form {
+    margin: 0 auto;
+    width: min-content;
+    margin-bottom: 1em;
+}
+    
+.contact-us [type=submit] {
+    display: block;
+    border-radius: 2em;
+    padding: .75em 1em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 100%;
+    border:none;
+    width: 10em;
+    text-align: center;
+    margin: 0 auto;
+}
+    
+.contact-us [type=submit]:hover {
+    background: linear-gradient(90deg, #01B8E4 0%, #8DC142 33%, #F3B620 67%, #D93030 100%);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* End Contact Settings */
+
+/* Program Tab Page Color Settings */
+
+.programs, .summer-camp, .homeschool, .library-workshops {
+    background-color: #8DC142CC;
+    background-attachment: fixed;
+}
+
+/* End Program Tab Page Color Settings */
+
+/* Programs Settings */
+
+.programs ul {
+    width: 50%;
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+/* End Program Settings */
+
+/* Summer Camps Settings */
+
+.summer-camp #presentationContainer {
+    padding: 1.5em 0 1em;
+}
+.summer-camp p>img {
+    width: 100%;
+}
+
+/* End Summer Camps Settings */
+
+/* Homeschool Studio Settings */
+
+.homeschool img {
+    float: right;
+    width: 20em;
+    padding-left: 1.5em;
+    padding-bottom: 1.5em;
+}
+#meetTheTeacher {
+    min-height: 19em;
+}
+.homeschool article>p:first-of-type {
+    text-align: center;
+}
+.homeschool p:last-child {
+    padding-bottom: 1em;
+}
+
+/* End Homeschool Settings */
+
+/* Library Workshop Settings */
+
+.library-workshops>article>section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 2em;
+    grid-template-rows: minmax(2em, auto);
+    grid-template-areas: 
+    "workshopTitle workshopTitle"
+    "workshopDates image";
+}
+
+.library-workshops>article>section>img {
+    grid-area: image;
+    width: 100%;
+    padding-bottom: 1em;
+}
+.library-workshops>article>section>h3 {
+    grid-area: workshopTitle;
+}
+.library-workshops>article>section>ul {
+    grid-area: workshopDates;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+/* End Library Workshop Settings */
+
+/* Get Involved Tab Page Color Settings */
+
+.get-involved, .helping-the-cause {
+    background-color: #F3B620CC;
+    background-attachment: fixed;
+}
+
+/* End Get Involved Tab Page Color Settings */
+
+/* Get Involved Settings */
+
+.get-involved>article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 1em;
+    grid-template-areas:
+    "help image"
+    "pageLinks pageLinks";
+}
+.get-involved>article>section>p {
+    padding-bottom: 1em;
+}
+.get-involved #pageLinks>#buttonLink>a {
+    background-color: #D93030;
+}
+.get-involved>article>section:first-child>#buttonLink>a {
+    background-color: #01B8E4;
+}
+.get-involved>article>section:first-of-type {
+    grid-area: help;
+    align-self: center;
+}
+.get-involved>article>img {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+}
+.get-involved #pageLinks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    grid-area: pageLinks;
+}
+
+/* End Get Involved Settings */
+
+/* Helping Our Cause Settings */
+
+.helping-the-cause>article>section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(1em, auto);
+    grid-template-areas: 
+    "freeTitle freeTitle"
+    "kroger amazon"
+    "otherTitle otherTitle"
+    "wishlist donate";
+}
+.helping-the-cause>article>section>div {
+    padding: 0 1em 1em;
+}
+.helping-the-cause>article>section>div>img {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 0.5em;
+}
+.helping-the-cause>article>section>div:first-of-type>img {
+    width: 60%;
+}
+.helping-the-cause>article>section>div:nth-of-type(2)>img {
+    width: 45%;
+}
+.helping-the-cause>article>section>div>ol {
+    padding-left: 1em;
+}
+.helping-the-cause>article>section>div:first-of-type {
+    grid-area: kroger;
+}
+.helping-the-cause>article>section>div:nth-of-type(2) {
+    grid-area: amazon;
+}
+.helping-the-cause>article>section>div:nth-of-type(3) {
+    grid-area: wishlist;
+    text-align: center;
+    padding-top: 2em;
+}
+.helping-the-cause>article>section>div:nth-of-type(4) {
+    grid-area: donate;
+    text-align: center;
+    padding-top: 2em;
+}
+.helping-the-cause>article>section>h3:first-of-type {
+    grid-area: freeTitle;
+    font-size: 175%;
+}
+.helping-the-cause>article>section>h3:nth-of-type(2) {
+    grid-area: otherTitle;
+    font-size: 175%;
+}
+.helping-the-cause #buttonLink>a {
+    background-color: #D93030;
+}
+
+/* End Helping Our Cause Settings */
+
+/* Donate Settings */
+
+.donate-now {
+    background-color: #D93030CC;
+    background-attachment: fixed;
+}
+.donate-now>article>div {
+    width: 100%;
+    height: 16em;
+    background-image: url("images/donate/groupArtTrip.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.donate-now>article>p {
+    padding: 2em 1em;
+}
+.donate-now>article>a>img {
+    opacity: 80%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    transition: opacity 0.3s ease 0s;
+}
+.donate-now>article>a:hover>img {
+    opacity: 100%;
+}
+
+/* End Donate Settings */
+
+@media screen and (max-width:590px) {
+    #siteTitle {
+        font-size: 75%;
+    }
+    .home h1 {
+        font-size: 12vw;
+    }
+    .home h2 {
+        font-size: 8vw;
+    }
+    .home a {
+        font-size: 4vw;
+    }
+    .home h1, .home h2 {
+        text-align: center;
+    }
+    .home>article>div>div {
+        text-align: center;
+    }
+    .contact-us>article {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "map"
+        "location"
+        "contactMethods"
+        "emailSignUp";
+    }
+    .programs ul {
+        width: 90%;
+    }
+    .homeschool img {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .library-workshops>article>section {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        grid-template-areas: 
+        "workshopTitle"
+        "image"
+        "workshopDates";
+    }
+    .get-involved>article {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"
+        "pageLinks"
+        "help";
+    }
+    .helping-the-cause>article>section {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(1em, auto);
+        grid-template-areas: 
+        "freeTitle"
+        "kroger"
+        "amazon"
+        "otherTitle"
+        "wishlist"
+        "donate";
+    }
+}
+
+@media screen and (min-width:591px) and (max-width:1000px) {
+    #siteTitle {
+        font-size: 90%;
+    }
+    .home h1 {
+        font-size: 11vw;
+    }
+    .home h2 {
+        font-size: 8vw;
+    }
+    .home a {
+        font-size: 3vw;
+    }
+    .contact-us>article {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "map"
+        "location"
+        "contactMethods"
+        "emailSignUp";
+    }
+    .programs ul {
+        width: 75%;
+    }
+    .homeschool img {
+        float: right;
+        width: 45%;
+    }
+    .library-workshops>article>section {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        grid-template-areas: 
+        "workshopTitle"
+        "image"
+        "workshopDates";
+    }
+    .library-workshops>article>section>img {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .get-involved>article {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"
+        "pageLinks"
+        "help";
+    }
+    .helping-the-cause>article>section {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(1em, auto);
+        grid-template-areas: 
+        "freeTitle"
+        "kroger"
+        "amazon"
+        "otherTitle"
+        "wishlist"
+        "donate";
+    }
+}
+
+@media screen and (min-width:1001px) {
+    .about-us #secTitle {
+        display: none;
+    }
+    .about-us iframe {
+        width: 80vw;
+        height: 79vh;
+        margin: 1.5em auto 0.5em;
+    }
+    .summer-camp #secTitle, .summer-camp p:not(#presentationContainer) {
+        display: none;
+    }
+}

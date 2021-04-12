@@ -1,0 +1,396 @@
+<!-- 
+	
+	An experiment in single page websites. Developed by RW.
+
+	Site Map for Pages That Exist
+
+		> Home
+		> Who We Are
+			> Staff
+			> Contact Us
+		> Programs
+			> Summer Camps
+			> Homeschool Studio
+			> Library Workshops
+		> Get Involved
+			> Help Our Cause
+		> Donate Now!
+
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<link href="AWAHDesign.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no">
+	<title>Art With a Heart</title>
+	<link rel="icon" href="images/icon/cropped-AWaH-Logo_trans-HQ-e1554143720388-32x32.png" sizes="32x32">
+	<script src="https://kit.fontawesome.com/6687b22cea.js" crossorigin="anonymous"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/AWAHFunctions.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header role="banner">
+		<a href=""><img src="images/logo/AWAHLogoFB.jpg" alt="Art With a Heart Logo"></a>
+		<a href="" id="siteTitle"><h1><span>Art</span> <span>With</span><br/><span>a</span> <span>Heart</span></h1></a>
+		<div onclick="toggleNav()" onmouseover="" id="hamburger">
+			<hr id="topBun"/>
+			<hr id="patty"/>
+			<hr id="bottomBun"/>
+		</div>
+	</header>
+	<nav role="navigation" id="sideNav">
+		<ul>
+			<li>
+				<p>
+					<a onmouseover="" href="#about-us">Who We Are</a><span onclick="toggleDropdown(this)"><i class="fas fa-chevron-down"></i></span>
+				</p>
+				<ul>
+					<li><a href="#staff">Staff</a></li>
+					<li><a href="">Board of Directors</a></li>
+					<li><a href="#contact-us">Contact Us</a></li>
+					<li><a href="">Our Sponsors</a></li>
+				</ul>
+			</li>
+			<li>
+				<p>
+					<a onmouseover="" href="#programs">Programs</a><span onclick="toggleDropdown(this)"><i class="fas fa-chevron-down"></i></span>
+				</p>
+				<ul>
+					<li><a href="">Art Studio</a></li>
+					<li><a href="#summer-camp">Summer Camps</a></li>
+					<li><a href="#homeschool">Homeschool Studio</a></li>
+					<li><a href="#library-workshops">Library Workshops</a></li>
+					<li><a href="">Creative Classrooms</a></li>
+				</ul>
+			</li>
+			<li>
+				<p>
+					<a onmouseover="" href="#get-involved">Get Involved</a><span onclick="toggleDropdown(this)"><i class="fas fa-chevron-down"></i></span>
+				</p>
+				<ul>
+					<li><a href="">Volunteer</a></li>
+					<li><a href="#helping-the-cause">Help our Cause</a></li>
+				</ul>
+			</li>
+			<li>
+				<p>
+					<a onmouseover="" href="#donate-now">Donate Now!</a>
+				</p>
+			</li>
+		</ul>
+	</nav>
+
+	<main id="main">
+		<section id="#home" class="home clearfix" role="main" aria-labelledby="home">
+			<article>
+				<div>	
+					<h1>We Believe</h1>
+						<h2>All Kids Deserve Art</h2>
+						<div><a href="#about-us">Find Out More <i class="fas fa-chevron-right"></i></a></div>
+				</div>
+			</article>
+		</section>
+
+		<section id="#about-us" class="about-us clearfix" role="main" aria-labelledby="about-us">
+			<section id="secTitle">
+				<h1>About Us</h1>
+			</section>
+			<article>
+				<iframe src="https://www.youtube.com/embed/cfxqFg7BxYw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<h3>Our Vision:</h3>
+					<p>The Art With a Heart vision is that all children, regardless of background, have the opportunity to improve their quality of life through artistic expression.</p>
+				<h3>Our Mission:</h3>
+					<p>The mission of Art With a Heart is to provide equitable opportunities for high quality visual arts education to Indianapolis children and youth.</p><br>
+					<p>We provide hands-on visual arts experiences that educate and inspire children in Indianapolis. Our programs uniquely reinforce academics within the artistic experience and strive to instill confidence in our kids, benefiting them in both school and life.</p>
+				<h3>Our Method:</h3>
+					<p>Art With a Heart positively impacts the lives of thousands of children, and thereby builds better communities through art, education and love.</p><br>
+					<p>Using standards-driven fine art curriculum, Art With a Heart offers programming for children both in school and out of school. We strive to teach skills that benefit children in both school and life. Lesson plans are designed to encourage critical thinking and build problem-solving skills. Curricula include state-mandated educational standards. Low student:teacher ratios (15:1) combined with numerous volunteers help us provide the attention our students need.  We teach on-site at various locations from IPS classrooms to neighborhood centers to our own studio at 37 Place.</p>
+					<div id="buttonLink"><a href="#programs">Check Out Our Programs <i class="fas fa-chevron-right"></i></a></div>
+				<h3>About Our Students:</h3>
+					<ul>
+						<li>Over 3,500 students served annually</li>
+						<li>Ages range from Pre-K through 12th Grade</li>
+						<li>70% of Art With a Heart students come from families who identify as at or below the federal poverty line</li>
+						<li>60% Black, 20% Latino, 20% Caucasian</li>
+					</ul>
+				<h3>The Art With A Heart Story</h3>
+					<p>Founder and art teacher Carol Conrad created Art With a Heart in <strong>2002</strong> to provide hands-on visual art experiences that educate, inspire, and give hope to children. By <strong>2005</strong>, Art With a Heart started with two summer camps and quickly grew. Within 3 years, AWaH was running programming year-round and adding after school programs during the school year. Around the same time, AWaH opened its first studio and began offering Saturday classes which grew into the Honors programs that serves the most artistically interested students. AWaH launched a kindergarten program in <strong>2007</strong> in response to the state’s decision to fund all-day kindergarten. In <strong>2009</strong>, Carol Conrad retired, placing the organization in the hands of the Board of Trustees and a new Executive Director.</p>
+				<iframe src="https://www.youtube.com/embed/BhvZzx0kHHw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</article>
+		</section>
+
+			<section id="#staff" class="staff clearfix" role="main" aria-labelledby="staff">
+				<section id="secTitle">
+					<h1>Staff</h1>
+				</section>
+				<article>
+					<p>The staff at Art With a Heart are driven by a desire to bring top quality programs to all students regardless of their background.  We love seeing students discover the joy of engaging in, creating and understanding art.  This is a small, highly motivated, highly trained and highly committed team.  Read on to learn more about the team that teachers want to work with!</p>
+					<div id="staffFlex">
+						<section>
+							<div id="staffImgContainer">
+								<img src="images/staff/stevenStolen.jpg" alt="Steven Stolen">
+							</div>
+							<div id="staffTitle">
+								<h3>Steven Stolen<br/>
+									Managing Director<br/>
+									<a href="mailto:sstolen@artwithaheart.us">sstolen@artwithaheart.us</a>
+								</h3>
+							</div>
+						</section>
+						<section>
+							<div id="staffImgContainer">
+								<img src="images/staff/Faren-Jones-300x300.jpg" alt="Faren Jones">
+							</div>
+							<div id="staffTitle">
+								<h3>Faren Jones<br/>
+									Development Director<br/>
+									<a href="mailto:fjones@artwithaheart.us">fjones@artwithaheart.us</a>
+								</h3>
+						</section>
+						<section>
+							<div id="staffImgContainer">
+								<img src="images/staff/kellyprofile-1.jpg" alt="Kelly Bradbury">
+							</div>
+							<div id="staffTitle">
+								<h3>Kelly Bradbury<br/>
+									Volunteer Manager<br/>
+									<a href="mailto:kbradbury@artwithaheart.us">volunteer@artwithaheart.us</a>
+								</h3>
+							</div>
+						</section>
+						<section>
+							<div id="staffImgContainer">
+								<img src="images/staff/laura.jpg" alt="Laura Hurrle">
+							</div>
+							<div id="staffTitle">
+								<h3>Laura Hurrle<br/>
+									Site Director<br/>
+									<a href="mailto:lhurrle@artwithaheart.us">lhurrle@artwithaheart.us</a>
+								</h3>
+							</div>
+						</section>
+						<section>
+							<div id="staffImgContainer">
+								<img src="images/staff/Monica-Sanchez.jpg" alt="Monica Sanchez">
+							</div>
+							<div id="staffTitle">
+								<h3>Monica Sanchez<br/>
+									Site Director<br/>
+									<a href="mailto:msanchez@artwithaheart.us">msanchez@artwithaheart.us</a>
+								</h3>
+							</div>
+						</section>
+					</div>
+				</article>
+			</section>
+
+			<section id="#contact-us" class="contact-us clearfix" role="main" aria-labelledby="contact-us">
+				<section id="secTitle">
+					<h1>Contact Us</h1>
+				</section>
+				<article>
+					<div id="contactMethods">
+						<h3>Get in Touch to Get Involved</h3>
+						<h4>Email us at <a href="mailto:awah@artwithaheart.us">awah@artwithaheart.us</a></h4>
+						<h4><span>OR</span></h4>	
+						<div id="buttonLink"><a href="#staff">Contact a Staff Member <i class="fas fa-chevron-right"></i></a></div>
+					</div>
+					<iframe src="http://www.mapquest.com/embed?hk=19SCrjr" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+					<div id="location">
+						<p>Our studios are conveniently located just off the corner of Keystone Avenue and 25th Street in Indianapolis.</p><br/>
+						<p>2605 East 25th Street<br/>
+							Suite 301<br/>
+							Indianapolis, Indiana 46218<br/>
+							Phone Number: <a href="tel:+13176027222">(317) 602-7222</a><br/>
+							Fax: <a href="fax:+13176027227">(317) 602-7227</a>
+						</p>
+					</div>
+					<div id="emailSignUp">
+						<h3>Sign Up For Email Updates!</h3>
+							<form role="form">
+								<label for="email">Email:</label>
+								<input id="email" name="email" type="email" placeholder="johndoe@joeschmo.com" required aria-required="true"><br/>
+								<input id="submit" name="submit" value="Sign Up Now!" type="submit">
+							</form>
+					</div>
+				</article>
+			</section>
+
+		<section id="#programs" class="programs clearfix" role="main" aria-labelledby="programs">
+			<section id="secTitle">
+				<h1>Programs</h1>
+			</section>
+			<article>
+				<h3>Setting the Standard for Art</h3>
+					<p>Art With a Heart offers a variety of art programs for children who want to learn and explore through art instruction and education in urban neighborhoods throughout Indianapolis. We offer several studio programs for students second through twelfth grade, as well as a unique in-school professional development program that helps classroom teachers administer an integrated arts curriculum to early childhood classrooms.  During the summer months, we provide a full-day, immersive art camp experience. Student art galleries are held at the conclusion of each programming session to celebrate their successes and engage parents and community members.</p>
+				<h3>Our Program Offerings</h3>
+					<p>Many children who come to Art With a Heart have had little exposure to the arts; some only having experience with basic drawing materials.  By giving these students the opportunity to create with high quality art materials, we expose them to more than one way of looking at and creating art.  Art With a Heart is dedicated to introducing children to the joy that comes from creating art in a safe, secure and enriching environment.</p>
+				<h3>Our Core Values</h3>
+					<ul>
+						<li>Quality art starts with quality materials</li>
+						<li>Low student/teacher ratios (15:1), which allow us to give more individual attention</li>
+						<li>The emotional well-being of our students is of utmost importance</li>
+						<li>Student safety is paramount</li>
+						<li>The joy of the creative process is always to be encouraged</li>
+						<li>Students should be held to high expectations in order to do their best work</li>
+						<li>State standards for education should and will be incorporated into lesson plans</li>
+						<li>Students can/will be challenged to learn creativity and applying problem-solving skills</li>
+						<li>Artistic skill/technique is first demonstrated, then practiced, reviewed and tested</li>
+						<li>Students can/should be taught leadership development, team building and cooperation skills</li>
+						<li>Students can/should be taught to focus and follow through on projects to completion</li>
+					</ul>
+			</article>
+		</section>
+
+			<section id="#summer-camp" class="summer-camp clearfix" role="main" aria-labelledby="summer-camp">
+				<section id="secTitle">
+					<h1>Summer Camps</h1>
+				</section>
+				<article>
+					<p>We are proud to announce that we have extended our Art With a Heart summer camp offerings to include more available weeks as well as single day camps. We have brought back some popular favorites and added lots of new options, too. So much to choose from!</p>
+					<p id="presentationContainer"><script id="asp-embed-script" data-zindex="1000000" type="text/javascript" charset="utf-8" src="https://spark.adobe.com/page-embed.js"></script><a class="asp-embed-link" href="https://spark.adobe.com/page/rBTRsyTYYw5kM/" target="_blank" rel="noopener"><img src="https://spark.adobe.com/page/rBTRsyTYYw5kM/embed.jpg?buster=1583512843811" alt="Art With a Heart Summer Camps in Indianapolis" border="0" /></a></p>
+				</article>
+			</section>
+			<section id="#homeschool" class="homeschool clearfix" role="main" aria-labelledby="homeschool">
+				<section id="secTitle">
+					<h1>Homeschool</h1>
+				</section>
+				<article>
+					<section id="meetTheTeacher">
+						<h3>Meet The Instructor: Mrs. Green</h3>
+							<img src="images/staff/laura.jpg" alt="Laura Teaching a Student">
+							<p>I have loved art ever since I can remember. As an adult, I continue to explore and create while sharing my passion with students through thoughtful and enthusiastic instruction. I graduated from Taylor University in 2004 and earned my master of education degree from Indiana Wesleyan in 2009. The first seven years of my career I spent teaching in elementary and middle schools in Tennessee and Indiana. In 2011, I left the public school system to explore opportunities to teach art that would allow me to stay at home with my three children. It’s been a wonderful journey and I am thrilled to be partnering with Art With a Heart to serve the needs of homeschool students in Indianapolis!</p>
+					</section>
+					<h3>2019-2020 Classes</h3>
+						<p>Registration is currently closed. If you have questions, please email <a href="mailto:AWAH@artwithaheart.us">AWAH@artwithaheart.us</a> with questions</p>
+					<h3>The Elements of Art</h3>
+						<p>At the AWaH Homeschool program, students receive excellent art instruction, empowering young artists to grow in their artistic abilities, while making new friends, and having lots of fun! Students will be exposed to a broad variety of art materials and processes. Our focus for the 2019-2020 school year is: <strong>The Elements of Art.</strong> We'll be exploring the fundamental 'ingredients' of ART (Line, Shape, Color, Value, Texture, and Form) with an all-star lineup of projects that expose these young artists to a wide range of materials and processes. Students receive excellent art instruction each and every week while making new friends, growing in their artistic abilities, and having a lot of fun!</p>
+				</article>
+			</section>
+			
+			<section id="#library-workshops" class="library-workshops clearfix" role="main" aria-labelledby="library-workshops">
+				<section id="secTitle">
+					<h1>Library Workshops</h1>
+				</section>
+				<article>
+					<p>Thanks to a partnership with the Indianapolis Public Library Foundation, we're able to offer workshop programming at no cost to the student! Registration through the library is required so we know how many supplies each workshop will require. Visit <a href="https://attend.indypl.org/events" target="_blank">attend.indypl.org/events</a> to find the date/location that fits your schedule and register!<br></p>
+					<section>
+						<img src="images/library-workshops/yarn-1-1024x1024.jpeg" alt="Yarn Balls">
+						<h3>Fall 2019: Finger Knitting Scarf Workshop</h3>
+							<ul>
+								<li>Saturday, October 5 @ 2pm &#8211; Irvington Branch</li>
+								<li>Monday, October 7 @ 1pm &#8211; Warren Branch</li>
+								<li>Wednesday, October 9 @ 1pm &#8211; Beech Grove Branch</li>
+								<li>Tuesday, October 15 @ 11am &#8211; Learning Curve at Central Library</li>
+								<li>Tuesday, October 15 @ 2pm &#8211; Garfield Park Branch</li>
+								<li>Tuesday, October 15 @ 4:30pm &#8211; Brightwood Branch</li>
+								<li>Tuesday, October 15 @ 5pm &#8211; Haughville Branch</li>
+								<li>Wednesday, October 16 @ 11am &#8211; College Avenue Branch</li>
+								<li>Wednesday, October 16 @ 2pm &#8211; West Indianapolis Branch</li>
+								<li>Thursday, October 17 @ 10:30am &#8211; East Washington Branch</li>
+								<li>Thursday, October 17 @ 2pm &#8211; Eagle Branch</li>
+								<li>Friday, October 18 @ 10:30am &#8211; Michigan Road Branch</li>
+								<li>Friday, October 18 @ 3pm &#8211; Decatur Branch</li>
+								<li>Monday, October 21 @ 5:30pm &#8211; Glendale Branch</li>
+								<li>Wednesday, October 23 @ 6pm &#8211; Lawrence Branch</li>
+								<li>Thursday, October 24 @ 3pm &#8211; Fountain Square Branch</li>
+								<li>Saturday, October 26 @ 2pm &#8211; Wayne Branch</li>
+								<li>Saturday November 9 @ 2pm &#8211; Nora Branch</li>
+								<li>Tuesday, December 3 @ 4pm &#8211; East 38th Street Branch</li>
+								<li>Saturday, December 7 @ 11am &#8211; Pike Branch</li>
+								<li>Saturday, December 14 @ 11am &#8211; Southport Branch</li>
+							</ul>
+					</section>
+				</article>
+			</section>
+
+		<section id="#get-involved" class="get-involved clearfix" role="main" aria-labelledby="get-involved">
+			<section id="secTitle">
+				<h1>Get Involved</h1>
+			</section>
+			<article>
+				<section>
+					<p>Helping out a nonprofit can mean many different things. Maybe you'd like to volunteer. Maybe you'd like to run a supply drive at work. Or maybe you'd like to donate toward the cause. We value and appreciate all of our supporters!</br></br>If you don't find the information you're looking for here, please drop us a line!</p>
+					<div id="buttonLink"><a href="#contact-us">Contact Us <i class="fas fa-chevron-right"></i></a></div>
+				</section>
+				<img src="images/get-involved/kidsColoring.png" alt="Children Painting with Watercolors">
+				<section id="pageLinks">
+					<div id="buttonLink"><a href="">Volunteer <i class="fas fa-chevron-right"></i></a></div>
+					<div id="buttonLink"><a href="#helping-the-cause">Help Our Cause <i class="fas fa-chevron-right"></i></a></div>
+					<div id="buttonLink"><a href="#donate-now">Donate Now! <i class="fas fa-chevron-right"></i></a></div>
+				</section>
+			</article>
+		</section>
+
+			<section id="#helping-the-cause" class="helping-the-cause clearfix" role="main" aria-labelledby="helping-the-cause">
+				<section id="secTitle">
+					<h1>Help Our Cause</h1>
+				</section>
+				<article>
+					<section>
+						<h3>How to Help for Free</h3>
+						<div>
+							<h3>Kroger Community Rewards</h3>
+							<img src="images/helping-the-cause/KrogerRewards.png" alt="Kroger Community Rewards Logo">
+								<p>Sign up for Kroger Community Rewards. You keep your fuel points and all your discounts. Every time you scan your card, Kroger will make a donation to Art With a Heart!</p><br/>
+								<p>Here’s how to sign up:</p>
+									<ol>
+										<li>Visit <a href="www.krogercommunityrewards.com" target="_blank">www.krogercommunityrewards.com</a></li>
+										<li>Sign in or create an account</li>
+										<li>Choose your Art With a Heart as your nonprofit of choice! (Our code is NF171)</li>
+									</ol>
+						</div>
+						<div>
+							<h3>AmazonSmile</h3>
+							<img src="images/helping-the-cause/amazonsmile.png" alt="Amazon Smile Logo">
+							<p>AmazonSmile is a website operated by Amazon with the same products, prices, and shopping features as Amazon.com. The difference is that when you shop on AmazonSmile, the AmazonSmile Foundation will donate 0.5% of the purchase price of eligible products to the charitable organization of your choice.</p><br/>
+							<p>Here’s how to use AmazonSmile:</p>
+								<ol>
+									<li>Visit <a href="smile.amazon.com" target="_blank">smile.amazon.com</a></li>
+									<li>Sign in with your Amazon.com credentials</li>
+									<li>Choose a Art With a Heart as your charitable organization.</li>
+									<li>Shop as usual!</li>
+								</ol>
+						</div>
+						<h3>Other Ways to Help</h3>
+						<div>
+							<p>We are always in need of supplies! If you interested in buying supplies, check out our Amazon Wish List here</p>
+							<div id="buttonLink"><a href="https://www.amazon.com/hz/wishlist/ls/1ACZIZKZY5IKZ?ref_=wl_share" target="_blank">Our Amazon Wish List <i class="fas fa-chevron-right"></i></a></div>
+						</div>
+						<div>
+							<p>If you are interested in donating to our charity, please visit our donate page</p>
+							<div id="buttonLink"><a href="#donate-now">Donate Now! <i class="fas fa-chevron-right"></i></a></div>
+						</div>
+					</section>
+				</article>
+			</section>
+		
+		<section id="#donate-now" class="donate-now clearfix" role="main" aria-labelledby="donate-now">
+			<section id="secTitle">
+				<h1>Donate Now!</h1>
+			</section>
+			<article>
+				<div id="groupHeader"></div>
+				<p>A donation to Art With a Heart provides art supplies and individualized instruction, high-quality curricula, and so much more to children in Indianapolis. Any and all donations are accepted and appreciate any amount you can give. Your donation helps us to encourage our children's success in life through their success in art. Thank so much for your consideration!</p>
+				<a href="https://crm.bloomerang.co/HostedDonation?ApiKey=pub_e5524bde-b5a8-11e6-bb7f-024e165d44b3&WidgetId=4614144" target="_blank"><img src="images/donate/SecureDonationButton.png"></a>
+			</article>
+		</section>
+	</main>
+</body>
+<footer role="contentinfo">
+	<div id="socialMedia">
+		<a href="https://www.facebook.com/Artwithaheartindy" target="_blank"><i class="fab fa-facebook" target="_blank"></i></a>
+		<a href="https://twitter.com/ArtWithAHeart2" target="_blank"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.flickr.com/photos/awah_indianapolis/" target="_blank"><i class="fab fa-flickr" target="_blank"></i></a>
+		<a href="https://www.linkedin.com/company/art-with-a-heart-indianapolis/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+	</div>
+	<p>&#169; Art With a Heart 2020</p>
+</footer>
+</html>
